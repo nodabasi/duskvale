@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duskvale — Support</title>
+<meta name="description" content="Help and contact for Duskvale: no sound, how layers work, background playback, the colour visualiser, languages and ad settings.">
+<link rel="icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://nodabasi.github.io/duskvale/en/support/">
+<link rel="alternate" hreflang="tr" href="https://nodabasi.github.io/duskvale/support/">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img src="../../assets/logo.png" alt="Duskvale">
+  <h1>Support</h1>
+  <p class="tagline">Questions, bugs and feedback</p>
+</header>
+
+<div class="contact">
+  <p>Write to <a href="mailto:odabasi.developer@gmail.com">odabasi.developer@gmail.com</a>
+  and you will hear back within a few days.</p>
+  <p>To reproduce a problem it helps a lot if you include your device model, your iOS or
+  Android version, and which layers were playing when it happened.</p>
+</div>
+
+<h2>Getting started</h2>
+
+<h3>Do I need an account?</h3>
+<p>No. Duskvale has no account, no sign-in and no sync. You open it and use it.</p>
+
+<h3>How do the layers work?</h3>
+<p>There are six families of layers: Rain, Wind, Water, Fire, Night Nature and Resonance.
+The numbers on a family's row are that family's recordings. Tapping a number starts it;
+tapping another number in the same family crossfades between the two. <b>Only one
+recording plays per family at a time</b>, but all six families can be running
+together.</p>
+
+<h3>How do I stop one layer?</h3>
+<p>Press the <b>Stop</b> button on that family's row. To silence everything at once, use
+<b>Stop all</b> at the bottom of the list.</p>
+
+<h3>Can I set the volume per layer?</h3>
+<p>Yes, every family has its own slider, and it affects only that family — so you can push
+the rain forward and hold the fire back.</p>
+
+<h2>Sound problems</h2>
+
+<h3>I tapped a number and hear nothing.</h3>
+<p>Check these in order:</p>
+<ul class="plain">
+  <li>Your phone's volume, and any Bluetooth device it may be connected to.</li>
+  <li>That family's slider may be turned all the way down.</li>
+  <li>The first tap decodes the recording, which takes a moment; you will see a loading
+  indicator on the row. If it lasts longer than a second, try closing and reopening the
+  app.</li>
+</ul>
+
+<h3>It plays while my phone is on silent. Is that right?</h3>
+<p>Yes, and it is deliberate on iOS. Duskvale opens audio in the “playback” category —
+the same as a music app — and that category ignores the side mute switch. To silence it,
+turn the volume down or press <b>Stop all</b>.</p>
+
+<h3>Can I use it while music is playing in another app?</h3>
+<p>Yes. Duskvale opens its audio session so it mixes with others, so it will not interrupt
+what is already playing; the two sit on top of each other.</p>
+
+<h3>Does the sound keep playing after I leave the app?</h3>
+<p>No. Sound plays while the app is in the foreground; it stops when you switch to another
+app or lock the screen. Background playback is not in yet — if you need it, write in and
+it moves up the list.</p>
+
+<h3>Is there a sleep timer?</h3>
+<p>Not yet. A timer that fades out and stops on its own is one of the most requested
+things and it is on the plan.</p>
+
+<h3>I hear a click when a loop starts over.</h3>
+<p>You should not: the loop points are pulled in to cut the silence the encoder adds at
+the start of a file. If you still hear one, tell us which layer it was and we will rework
+that recording.</p>
+
+<h2>Colour and the visualiser</h2>
+
+<h3>The visualiser screen is empty.</h3>
+<p>You need to add a colour first. Flip the switch at the top to <b>Color</b>, drag your
+finger across the wheel to pick one, then press <b>Add</b>. With at least one colour in
+the list, <b>Visualize</b> has something to draw.</p>
+
+<h3>The colours are frozen, nothing moves.</h3>
+<p>That means “reduce motion” is turned on for your phone. With that setting on, the
+visualiser deliberately draws a single still frame. To see the motion, turn it off under
+<b>Settings › Accessibility › Motion</b> on iOS, or <b>Settings › Accessibility</b> on
+Android.</p>
+
+<h3>How many colours can I add?</h3>
+<p>As many as you like, but the first eight are what get drawn on screen. The same colour
+is never added twice, and tapping a colour in the list removes it.</p>
+
+<h3>My colours were gone after I closed the app.</h3>
+<p>That is how it works for now: the colour list lives only for that session. Saved
+palettes are a requested feature — writing in makes the count go up.</p>
+
+<h2>Language and appearance</h2>
+
+<h3>How do I change the app's language?</h3>
+<p>Tap the gear icon at the top right, then <b>Language</b>. On first launch the app
+follows your phone's language, falling back to English for languages it does not have. A
+language you pick by hand is remembered.</p>
+
+<h3>Which languages are there?</h3>
+<p>Turkish, English, German, Spanish, French, Italian, Portuguese (Brazil), Japanese,
+Korean and Arabic.</p>
+
+<h3>The Arabic interface is not right-to-left.</h3>
+<p>Correct — the text is Arabic, but the layout is not mirrored yet. Proper RTL support is
+a separate job and it is on the list.</p>
+
+<h3>Is there a light theme?</h3>
+<p>No. Duskvale was made for the night and ships with a single dark theme.</p>
+
+<h2>Ads and privacy</h2>
+
+<h3>Is there a paid version without ads?</h3>
+<p>Not at the moment. The app is free and covered by the banner ads above and below the
+mixer; there are no in-app purchases. The visualiser opens full screen, so you see no ads
+there.</p>
+
+<h3>I want to withdraw my consent for personalised ads.</h3>
+<p>If you are in a region where Google's consent form is required (in practice the EU),
+the <b>Settings</b> screen shows an <b>Ad privacy options</b> row that reopens the form
+whenever you want. The route that works everywhere is your phone's own settings:
+<b>Settings › Privacy &amp; Security › Tracking</b> on iOS, <b>Settings › Google › Ads</b>
+on Android.</p>
+
+<h3>What does the app store about me?</h3>
+<p>The only thing it keeps on your phone is the interface language you picked. We run no
+server, so nothing reaches us. What the ads have access to is set out one by one in the
+<a href="../privacy/">privacy policy</a>.</p>
+
+<h3>How do I delete my data?</h3>
+<p>Remove the app from your phone; the language preference goes with it. There is no
+account to close and no server record to clear.</p>
+
+<div class="notice">
+  <p>Uninstalling the app does not reset your advertising consent — that lives in your
+  phone's ad settings.</p>
+</div>
+
+<hr>
+<footer>
+  <a href="../">Duskvale</a>
+  <a href="../privacy/">Privacy Policy</a>
+  <a href="../../support/" hreflang="tr">Türkçe</a>
+  <div class="copyright">© 2026 Odabasi Development</div>
+</footer>
+
+</div>
+</body>
+</html>

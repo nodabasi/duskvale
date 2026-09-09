@@ -1,0 +1,322 @@
+/* Shared stylesheet for every page. The palette follows the app, which only has
+   a dark theme: a near-black dusk ground, warm gold for the primary accent and a
+   twilight violet for the second one — the two colours of the icon's sky.
+
+   Dark is therefore the base, and the single media query lightens things for
+   people whose system asks for a light scheme. Mobile first: the layout rules
+   target a phone and only widen further down. */
+
+:root {
+  --ink: #e8e6f0;
+  --ink-soft: #a9a7be;
+  --ink-faint: #8b8aa0;
+  --ground: #12121a;
+  --card: #1c1c28;
+  --line: #2e2e42;
+
+  --gold: #d9a441;
+  --violet: #9b8ce0;
+  --rose: #e2879b;
+
+  /* Same hues at low alpha, for card fills, badges and the header wash. */
+  --gold-tint: #d9a44124;
+  --violet-tint: #9b8ce024;
+  --rose-tint: #e2879b24;
+
+  --shadow: 0 6px 24px rgb(0 0 0 / 0.45);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ink: #17161f;
+    --ink-soft: #56546a;
+    --ink-faint: #6d6b80;
+    --ground: #f7f5fa;
+    --card: #ffffff;
+    --line: #e5e1ee;
+
+    --gold: #8a6410;
+    --violet: #5646a8;
+    --rose: #b6304f;
+
+    --gold-tint: #8a64101a;
+    --violet-tint: #5646a81a;
+    --rose-tint: #b6304f1a;
+
+    --shadow: 0 6px 24px rgb(23 22 31 / 0.10);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 18px 64px;
+  background: var(--ground);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+}
+
+img { max-width: 100%; }
+
+.wrap { max-width: 680px; margin: 0 auto; }
+
+/* Header — a tinted band, gold glow low and violet high, like the icon's sky */
+
+header {
+  position: relative;
+  margin: 18px 0 8px;
+  padding: 40px 20px 32px;
+  text-align: center;
+  border-radius: 24px;
+  background:
+    radial-gradient(60% 80% at 20% 0%, var(--violet-tint), transparent 70%),
+    radial-gradient(60% 80% at 80% 0%, var(--violet-tint), transparent 70%),
+    radial-gradient(80% 90% at 50% 110%, var(--gold-tint), transparent 70%);
+}
+
+header img {
+  width: 84px;
+  height: 84px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  margin: 18px 0 6px;
+  font-size: clamp(28px, 8vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  background: linear-gradient(100deg, var(--gold), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(16px, 4.4vw, 19px);
+}
+
+/* Section headings — a coloured bar alternating gold and violet */
+
+h2 {
+  position: relative;
+  margin: 40px 0 12px;
+  padding-left: 14px;
+  font-size: clamp(20px, 5.4vw, 23px);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.16em;
+  bottom: 0.16em;
+  width: 5px;
+  border-radius: 3px;
+  background: var(--gold);
+}
+
+h2:nth-of-type(even)::before { background: var(--violet); }
+
+h3 {
+  margin: 26px 0 4px;
+  font-size: 17px;
+  color: var(--gold);
+}
+
+p { margin: 12px 0; }
+
+a { color: var(--violet); }
+
+hr {
+  margin: 44px 0 0;
+  border: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--violet));
+  opacity: 0.75;
+}
+
+/* Numbered walkthrough on the landing page */
+
+.steps {
+  list-style: none;
+  margin: 18px 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.steps li {
+  position: relative;
+  counter-increment: step;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--gold);
+  border-radius: 14px;
+  padding: 14px 16px 14px 56px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 14px;
+  top: 15px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  background: var(--gold-tint);
+}
+
+.steps li:nth-child(even) { border-left-color: var(--violet); }
+.steps li:nth-child(even)::before { color: var(--violet); background: var(--violet-tint); }
+
+.steps b { display: block; font-size: 17px; }
+.steps li:nth-child(odd) b { color: var(--gold); }
+.steps li:nth-child(even) b { color: var(--violet); }
+
+.steps span { color: var(--ink-soft); font-size: 15px; }
+
+/* The sound catalogue: one card per category, with how many recordings it holds */
+
+.layers {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+  padding: 0;
+  grid-template-columns: 1fr;
+}
+
+.layers li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 13px 16px;
+  box-shadow: var(--shadow);
+}
+
+.layers b {
+  color: var(--gold);
+  font-size: 17px;
+}
+
+.layers li:nth-child(even) b { color: var(--violet); }
+
+.layers .count {
+  margin-left: auto;
+  flex: none;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--gold-tint);
+  color: var(--ink-soft);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.layers li:nth-child(even) .count { background: var(--violet-tint); }
+
+.layers span.what { color: var(--ink-soft); font-size: 15px; }
+
+/* Plain bullet lists — coloured markers, alternating */
+
+ul.plain { padding-left: 22px; }
+
+ul.plain li { margin: 7px 0; }
+
+ul.plain li::marker { color: var(--gold); font-size: 1.1em; }
+ul.plain li:nth-child(even)::marker { color: var(--violet); }
+
+/* Contact box */
+
+.contact {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--gold);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
+
+.contact p:first-child { margin-top: 0; }
+.contact p:last-child { margin-bottom: 0; }
+.contact a { font-weight: 600; }
+
+/* Callout for the things a reader must not miss */
+
+.notice {
+  background: var(--rose-tint);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--rose);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 20px 0;
+}
+
+.notice p:first-child { margin-top: 0; }
+.notice p:last-child { margin-bottom: 0; }
+
+/* Effective-date line under a policy heading */
+
+.meta {
+  display: inline-block;
+  margin: 6px 0 0;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--gold-tint);
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 22px;
+  padding-top: 18px;
+  color: var(--ink-faint);
+  font-size: 15px;
+  line-height: 2.2;
+  text-align: center;
+}
+
+footer a {
+  margin: 0 4px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--violet-tint);
+  color: var(--violet);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+footer a:hover { text-decoration: underline; }
+
+footer .copyright { margin-top: 16px; line-height: 1.6; }
+
+/* Wider screens */
+
+@media (min-width: 560px) {
+  body { padding: 0 24px 72px; }
+  header { padding: 52px 24px 40px; }
+  header img { width: 96px; height: 96px; }
+  .steps li { padding-right: 20px; }
+  .layers { grid-template-columns: 1fr 1fr; }
+}

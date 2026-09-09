@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duskvale — Destek</title>
+<meta name="description" content="Duskvale için yardım ve iletişim: ses çıkmaması, katmanlar, arka planda çalma, renk görselleştirmesi, dil ve reklam ayarları.">
+<link rel="icon" href="../assets/logo.png">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://nodabasi.github.io/duskvale/en/support/">
+<link rel="alternate" hreflang="tr" href="https://nodabasi.github.io/duskvale/support/">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img src="../assets/logo.png" alt="Duskvale">
+  <h1>Destek</h1>
+  <p class="tagline">Sorular, hatalar ve geri bildirim</p>
+</header>
+
+<div class="contact">
+  <p><a href="mailto:odabasi.developer@gmail.com">odabasi.developer@gmail.com</a>
+  adresine yaz, birkaç gün içinde cevap alırsın.</p>
+  <p>Bir sorunu tekrar üretebilmemiz için cihaz modelini, iOS ya da Android sürümünü ve
+  olay olduğunda hangi katmanların açık olduğunu da yazarsan çok iyi olur.</p>
+</div>
+
+<h2>Başlarken</h2>
+
+<h3>Hesap açmam gerekiyor mu?</h3>
+<p>Hayır. Duskvale'in hesabı, girişi ya da senkronizasyonu yok. Uygulamayı açıyorsun ve
+kullanıyorsun.</p>
+
+<h3>Katmanlar nasıl çalışıyor?</h3>
+<p>Altı katman ailesi var: Yağmur, Rüzgar, Su, Ateş, Gece Doğası ve Rezonans. Her ailenin
+satırındaki numaralar o ailenin kayıtları. Bir numaraya bastığında o kayıt çalmaya
+başlar; aynı ailede başka bir numaraya bastığında ikisi arasında çapraz geçiş olur.
+<b>Aynı aileden aynı anda yalnızca bir kayıt çalar</b>, ama altı ailenin altısı da aynı
+anda açık olabilir.</p>
+
+<h3>Bir katmanı nasıl durdururum?</h3>
+<p>O ailenin satırındaki <b>Durdur</b> düğmesine bas. Hepsini birden susturmak için
+listenin altındaki <b>Tümünü durdur</b> var.</p>
+
+<h3>Sesi katman katman ayarlayabilir miyim?</h3>
+<p>Evet, her ailenin kendi kaydırıcısı var. Kaydırıcı yalnızca o aileyi etkiler, yani
+yağmuru öne çıkarıp ateşi geride tutabilirsin.</p>
+
+<h2>Ses sorunları</h2>
+
+<h3>Bir numaraya bastım ama ses gelmiyor.</h3>
+<p>Sırayla şunlara bak:</p>
+<ul class="plain">
+  <li>Telefonun ses seviyesi ve varsa bağlı bir Bluetooth cihazı.</li>
+  <li>O ailenin kaydırıcısı sonuna kadar kısılmış olabilir.</li>
+  <li>İlk basışta kayıt çözümlenirken kısa bir bekleme olur; satırda bir yükleme
+  göstergesi görürsün. Bir saniyeden uzun sürüyorsa uygulamayı kapatıp açmayı dene.</li>
+</ul>
+
+<h3>Telefonum sessizdeyken çalıyor, normal mi?</h3>
+<p>Evet, iOS'ta bilinçli olarak böyle. Duskvale sesi “çalma” kategorisinde açıyor —
+tıpkı bir müzik uygulaması gibi — ve bu kategori yandaki sessize alma anahtarına takılmaz.
+Susturmak için ses seviyesini indir ya da <b>Tümünü durdur</b>'a bas.</p>
+
+<h3>Başka uygulamada müzik dinlerken kullanabilir miyim?</h3>
+<p>Evet. Duskvale ses oturumunu diğer uygulamalarla karışacak şekilde açıyor, yani çalan
+müziği kesmez; iki ses üst üste gelir.</p>
+
+<h3>Uygulamadan çıkınca ses devam ediyor mu?</h3>
+<p>Hayır. Ses, uygulama ekranda önde dururken çalar; başka bir uygulamaya geçtiğinde ya da
+ekranı kilitlediğinde durur. Arka planda çalma henüz eklenmedi — ihtiyacın varsa yaz,
+sıralamada yukarı çeker.</p>
+
+<h3>Uyku zamanlayıcısı var mı?</h3>
+<p>Henüz yok. Belirli bir süre sonra kendi kendine kısılıp susan bir zamanlayıcı en çok
+istenen şeylerden biri; planda duruyor.</p>
+
+<h3>Döngü başa sarınca tık sesi duyuyorum.</h3>
+<p>Duymaman gerekiyor: kayıtların döngü sınırları, kodlayıcının başa eklediği sessizliği
+kesecek şekilde içeri çekildi. Yine de duyuyorsan hangi katmanda olduğunu yazarsan o
+kaydı elden geçiririz.</p>
+
+<h2>Renk ve görselleştirme</h2>
+
+<h3>Görselleştirme ekranı bomboş.</h3>
+<p>Önce renk eklemen gerekiyor. Üstteki anahtarı <b>Renk</b>'e al, tekerlek üzerinde
+parmağını gezdirip bir renk seç, <b>Ekle</b>'ye bas. Listede en az bir renk varken
+<b>Görselleştir</b> anlamlı bir şey çizer.</p>
+
+<h3>Renkler duruyor, hareket etmiyor.</h3>
+<p>Telefonundaki “hareketi azalt” ayarı açık demektir. O ayar açıkken görselleştirme
+bilinçli olarak tek bir sabit kare çizip durur. Hareketi görmek için iOS'ta
+<b>Ayarlar › Erişilebilirlik › Hareket</b>, Android'de <b>Ayarlar › Erişilebilirlik</b>
+altından kapatabilirsin.</p>
+
+<h3>Kaç renk ekleyebilirim?</h3>
+<p>İstediğin kadar ekleyebilirsin ama ekranda ilk sekiz renk çizilir. Aynı rengi iki kez
+eklemez; bir rengi listeden çıkarmak için üzerine basman yeterli.</p>
+
+<h3>Renklerim uygulamayı kapatınca kayboldu.</h3>
+<p>Öyle olması gerekiyor: renk listesi şimdilik yalnızca o oturum boyunca yaşıyor.
+Kalıcı paletler istenen bir özellik; yazarsan sayısı artar.</p>
+
+<h2>Dil ve görünüm</h2>
+
+<h3>Uygulamanın dilini nasıl değiştiririm?</h3>
+<p>Sağ üstteki dişli simgesi → <b>Dil</b>. Uygulama ilk açılışta telefonunun dilini
+kullanır, desteklemediğimiz bir dilse İngilizce'ye düşer. Elle seçtiğin dil hatırlanır.</p>
+
+<h3>Hangi diller var?</h3>
+<p>Türkçe, İngilizce, Almanca, İspanyolca, Fransızca, İtalyanca, Portekizce (Brezilya),
+Japonca, Korece ve Arapça.</p>
+
+<h3>Arapça arayüz sağdan sola değil.</h3>
+<p>Doğru — metinler Arapça, ama düzen henüz aynalanmıyor. Gerçek RTL desteği ayrı bir iş
+ve yapılacaklar listesinde.</p>
+
+<h3>Açık tema var mı?</h3>
+<p>Yok. Duskvale gece için tasarlandı ve tek bir koyu temayla geliyor.</p>
+
+<h2>Reklamlar ve gizlilik</h2>
+
+<h3>Reklamları kaldıran bir ücretli sürüm var mı?</h3>
+<p>Şu an yok. Uygulama ücretsiz ve masrafını mikser ekranının üstündeki ve altındaki
+banner reklamlar karşılıyor; uygulama içi satın alma yok. Görselleştirme tam ekran
+açıldığı için orada reklam görmezsin.</p>
+
+<h3>Kişiselleştirilmiş reklam iznimi geri almak istiyorum.</h3>
+<p>Google'ın izin formu gereken bir bölgedeysen (pratikte AB), <b>Ayarlar</b> ekranında
+<b>Reklam gizlilik seçenekleri</b> satırı çıkar ve formu istediğin zaman yeniden
+açabilirsin. Her yerde geçerli olan yol ise telefonunun ayarları: iOS'ta
+<b>Ayarlar › Gizlilik ve Güvenlik › İzleme</b>, Android'de <b>Ayarlar › Google ›
+Reklamlar</b>.</p>
+
+<h3>Uygulama hakkımda ne saklıyor?</h3>
+<p>Telefonunda tuttuğu tek şey seçtiğin arayüz dili. Bizim bir sunucumuz yok, dolayısıyla
+bize gelen bir şey de yok. Reklamların hangi veriye eriştiğini
+<a href="../privacy/">gizlilik politikası</a> tek tek anlatıyor.</p>
+
+<h3>Verilerimi nasıl silerim?</h3>
+<p>Uygulamayı telefonundan kaldırman yeterli; dil tercihi de onunla birlikte gider.
+Silinecek bir hesap, temizlenecek bir sunucu kaydı yok.</p>
+
+<div class="notice">
+  <p>Uygulamayı kaldırmak reklam izni tercihini sıfırlamaz — onu telefonun reklam
+  ayarlarından yönetiyorsun.</p>
+</div>
+
+<hr>
+<footer>
+  <a href="../">Duskvale</a>
+  <a href="../privacy/">Gizlilik Politikası</a>
+  <a href="../en/support/" hreflang="en">English</a>
+  <div class="copyright">© 2026 Odabasi Development</div>
+</footer>
+
+</div>
+</body>
+</html>

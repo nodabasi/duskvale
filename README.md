@@ -46,10 +46,11 @@ The site makes concrete claims about the app, and the app has to keep honouring 
 any of these change in `Duskvale/`, the matching section changes here too — in both
 languages:
 
-- **The app has no server.** The only thing it persists is the chosen interface language,
-  under the `duskvale.language` key in AsyncStorage (`src/i18n/useLanguage.ts`). The
-  palette (`src/store/usePaletteStore.ts`) and the mix are in-memory only. Adding any
-  account, sync or remote logging rewrites the privacy policy.
+- **The app has no server.** It persists two things in AsyncStorage: the chosen interface
+  language under `duskvale.language` (`src/i18n/useLanguage.ts`) and favourite mixes under
+  `duskvale.favorites` (`src/store/useFavoritesStore.ts`). The palette
+  (`src/store/usePaletteStore.ts`) is in-memory only. Adding any account, sync or remote
+  logging rewrites the privacy policy.
 - **Ads are AdMob banners**, one above and one below the mixer, and none on the
   visualiser (`src/components/AdBanner.tsx`). Consent is gathered through Google's UMP
   form plus ATT on iOS (`src/ads/useAdsStore.ts`). A new ad format, a new placement or an
@@ -57,9 +58,10 @@ languages:
 - **The catalogue is 28 recordings in six families** — rain 8, wind 4, water 4, fire 4,
   night nature 4, resonance 4 (`src/audio/catalog.ts`). Both landing pages print those
   counts.
-- **No background playback.** The audio session is set up without
-  `UIBackgroundModes/audio` (`src/audio/engine.ts`), so sound stops when the app leaves
-  the foreground. Both support pages say so; adding background audio means editing them.
+- **Background playback (since 1.1).** iOS has `UIBackgroundModes/audio`; Android runs a
+  media-playback foreground service with a notification while sound plays
+  (`src/audio/background.ts`), which adds the foreground-service and notification
+  permissions listed in the privacy policy. Both support pages describe it.
 - **Ten interface languages** (`src/i18n/translations.ts`), listed on both landing pages
   and both support pages.
 

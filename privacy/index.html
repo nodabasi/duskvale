@@ -19,7 +19,7 @@
   <p class="tagline">Hesap yok, sunucu yok — geriye reklamlar kalıyor</p>
 </header>
 
-<p class="meta">9 Eylül 2026'dan itibaren geçerli · iOS ve Android için Duskvale mobil
+<p class="meta">4 Ekim 2026'dan itibaren geçerli · iOS ve Android için Duskvale mobil
 uygulaması</p>
 
 <h2>Kısa özet</h2>
@@ -35,20 +35,28 @@ erişiyor. Bunun tam olarak ne anlama geldiğini aşağıda
 <p><b>Hiçbir şey.</b> Uygulamanın bizim tarafımıza gönderdiği bir veri yok: e-posta yok,
 kullanıcı adı yok, kimlik numarası yok, kullanım kaydı yok. İşlettiğimiz bir sunucu ya da
 veritabanı yok.</p>
-<p>Uygulamanın <b>telefonunda</b> sakladığı tek şey var:</p>
+<p>Uygulamanın <b>telefonunda</b> sakladığı iki şey var:</p>
 <ul class="plain">
   <li><b>Seçtiğin arayüz dili</b> — Ayarlar'dan bir dil seçtiğinde, uygulama bir sonraki
-  açılışta hatırlasın diye telefonun kendi yerel deposuna yazılıyor. Telefondan dışarı
-  çıkmıyor.</li>
+  açılışta hatırlasın diye telefonun kendi yerel deposuna yazılıyor.</li>
+  <li><b>Favori karışımların</b> — favorilere eklediğin karışımlarda hangi kaydın hangi
+  ses seviyesinde çaldığı. Aynı yerel depoda duruyor.</li>
 </ul>
-<p>Renk tekerleğinden eklediğin renkler ise hiç kaydedilmiyor; yalnızca uygulama açıkken
-bellekte duruyor ve uygulamayı kapattığında kayboluyor. Ses karışımın da aynı şekilde
-kaydedilmiyor.</p>
+<p>İkisi de telefondan dışarı çıkmıyor. Renk tekerleğinden eklediğin renkler ise hiç
+kaydedilmiyor; yalnızca uygulama açıkken bellekte duruyor ve uygulamayı kapattığında
+kayboluyor.</p>
 
 <h2>İzinler</h2>
 <p>Duskvale konum, mikrofon, kamera, rehber, fotoğraf ya da dosya izni istemiyor.
-Android'de tanımladığı tek izin <b>internet erişimi</b>, o da yalnızca reklamların
-yüklenmesi için. İzin istemediğimiz bir şeye erişemiyoruz.</p>
+Android'de tanımladığı izinler şunlar:</p>
+<ul class="plain">
+  <li><b>İnternet erişimi</b> — yalnızca reklamların yüklenmesi için.</li>
+  <li><b>Ön plan servisi (medya oynatma) ve bildirim</b> — sen başka uygulamaya geçince
+  ya da ekranı kilitleyince sesin sürmesi için. Ses çalarken bildirim alanında bir
+  Duskvale bildirimi görünür; oradan durdurabilirsin. Android 13 ve sonrasında bildirim
+  izni ilk çalmada sorulur; vermezsen ses yine çalar, yalnızca bildirim görünmez.</li>
+</ul>
+<p>İzin istemediğimiz bir şeye erişemiyoruz.</p>
 
 <h2 id="reklamlar">Reklamlar</h2>
 <p>Mikser ekranının üstünde ve altında birer banner reklam var; görselleştirme ekranında
@@ -92,7 +100,7 @@ hiçbir katman ya da özellik kapanmaz.</p>
 
 <h2>Verilerini silmek</h2>
 <p>Uygulamayı telefonundan kaldırdığında, uygulamanın sakladığı her şey — yani dil
-tercihin — onunla birlikte gider.</p>
+tercihin ve favorilerin — onunla birlikte gider.</p>
 <div class="notice">
   <p>Silinecek bir hesabın yok. Bize “verilerimi silin” demene gerek yok, çünkü elimizde
   tutulan bir verin yok.</p>

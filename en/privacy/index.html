@@ -19,7 +19,7 @@
   <p class="tagline">No account, no server — which leaves the ads</p>
 </header>
 
-<p class="meta">Effective 9 September 2026 · Applies to the Duskvale mobile app for iOS
+<p class="meta">Effective 4 October 2026 · Applies to the Duskvale mobile app for iOS
 and Android</p>
 
 <h2>The short version</h2>
@@ -33,19 +33,28 @@ Exactly what that involves is set out under <a href="#ads">Advertising</a> below
 <h2>What we collect</h2>
 <p><b>Nothing.</b> The app sends no data to us: no e-mail, no username, no identifier, no
 usage log. We operate no server and no database.</p>
-<p>There is exactly one thing the app stores <b>on your phone</b>:</p>
+<p>The app stores two things <b>on your phone</b>:</p>
 <ul class="plain">
   <li><b>The interface language you picked</b> — when you choose a language in Settings,
-  it is written to your phone's own local storage so the app remembers it next time. It
-  never leaves the device.</li>
+  it is written to your phone's own local storage so the app remembers it next time.</li>
+  <li><b>Your favourite mixes</b> — for each mix you add to favourites, which recordings
+  play and at what volume. They sit in the same local storage.</li>
 </ul>
-<p>The colours you add from the wheel are not saved at all; they live in memory while the
-app is open and are gone when you close it. Your sound mix is not saved either.</p>
+<p>Neither ever leaves the device. The colours you add from the wheel are not saved at
+all; they live in memory while the app is open and are gone when you close it.</p>
 
 <h2>Permissions</h2>
 <p>Duskvale asks for no location, microphone, camera, contacts, photo or file permission.
-The only permission it declares on Android is <b>internet access</b>, and that is purely
-so the ads can load. We cannot reach what we never asked for.</p>
+On Android it declares these permissions:</p>
+<ul class="plain">
+  <li><b>Internet access</b> — purely so the ads can load.</li>
+  <li><b>Foreground service (media playback) and notifications</b> — so the sound keeps
+  playing when you switch apps or lock the screen. While sound is playing, a Duskvale
+  notification shows in the notification shade and you can stop playback from there. On
+  Android 13 and later the notification permission is asked on first play; if you decline,
+  the sound still plays, only the notification is hidden.</li>
+</ul>
+<p>We cannot reach what we never asked for.</p>
 
 <h2 id="ads">Advertising</h2>
 <p>There is one banner ad above and one below the mixer screen; the visualiser has no ads.
@@ -90,7 +99,7 @@ way; no layer and no feature is turned off.</p>
 
 <h2>Deleting your data</h2>
 <p>Removing the app from your phone removes everything the app holds — that is, your
-language preference.</p>
+language preference and your favourites.</p>
 <div class="notice">
   <p>There is no account to delete. You do not need to ask us to erase your data, because
   we hold none of it.</p>
